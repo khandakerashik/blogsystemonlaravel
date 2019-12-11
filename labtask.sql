@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 09, 2019 at 08:48 AM
+-- Generation Time: Dec 11, 2019 at 09:02 PM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.11
 
@@ -25,27 +25,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `author`
---
-
-CREATE TABLE `author` (
-  `id` int(11) NOT NULL,
-  `name` varchar(100) NOT NULL,
-  `contact` varchar(100) NOT NULL,
-  `username` varchar(100) NOT NULL,
-  `password` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `author`
---
-
-INSERT INTO `author` (`id`, `name`, `contact`, `username`, `password`) VALUES
-(1, 'namex', '1232354', 'usernmae', 'pass');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `authors`
 --
 
@@ -56,6 +35,40 @@ CREATE TABLE `authors` (
   `username` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `authors`
+--
+
+INSERT INTO `authors` (`id`, `name`, `contact`, `username`, `password`) VALUES
+(1, 'testname', '123456789', 'test', '123'),
+(2, 'name', '12344', 'test2', '123s'),
+(3, 'namXe', '1234453', '3nameX', 'XbbvX'),
+(4, 'ashik', '12344', 'Mickey sd', '123'),
+(5, 'ashik asda', '12344sd', 'Mickey sdasdasd', 'sddas'),
+(6, 'ashik asdasdf', '12344sdsdfs', 'Mickeysd', 'cxfd'),
+(7, 'zxc', '12314234', 'xcxc', 'cxv'),
+(8, 'xzczxcsdfsf', 'asda', 'sdsad', 'asdd');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `blogs`
+--
+
+CREATE TABLE `blogs` (
+  `id` int(100) NOT NULL,
+  `author_name` varchar(100) NOT NULL,
+  `blog_title` varchar(100) NOT NULL,
+  `content` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `blogs`
+--
+
+INSERT INTO `blogs` (`id`, `author_name`, `blog_title`, `content`) VALUES
+(1, 'ashik', 'ctg', 'A details blog about ctg');
 
 -- --------------------------------------------------------
 
@@ -78,25 +91,24 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`userId`, `username`, `password`, `name`, `contact`, `type`) VALUES
 (1, 'ashik', '123', 'khandaker ashik', '123456', 'admin'),
-(2, 'user', 'userpass', 'user', '124243', 'author'),
-(6, 'name', 'pass', 'testname', '324', 'author'),
-(7, 'farhanR', 'sd', 'farhan', '3453534', 'author'),
-(8, '9', 'pass', 'test', '123456', 'author');
+(10, 'author', '123', 'ashik asdasdf', '12344sdsdfs', 'author'),
+(11, 'xcxc', 'cxv', 'zxc', 'xcv', 'author'),
+(12, 'sdsad', 'asdd', 'sadasd', 'asda', 'author');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `author`
---
-ALTER TABLE `author`
-  ADD UNIQUE KEY `id` (`id`);
-
---
 -- Indexes for table `authors`
 --
 ALTER TABLE `authors`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `blogs`
+--
+ALTER TABLE `blogs`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -111,22 +123,22 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT for table `author`
---
-ALTER TABLE `author`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
 -- AUTO_INCREMENT for table `authors`
 --
 ALTER TABLE `authors`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `blogs`
+--
+ALTER TABLE `blogs`
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `userId` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `userId` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
