@@ -34,7 +34,14 @@ class LoginController extends Controller
 			//$req->session()->put('user', $user[0]->type);
 			$req->session()->put('user', $user);
 
-			return redirect()->route('home.index');
+			$type = $req->session()->get('user');
+			if($type->type == 'admin' ){
+				return redirect()->route('home.index');
+			}
+			else{
+				return redirect()->route('author.index');
+			}
+			
 		}else{
 
 			$req->session()->flash('msg', 'invalid username/password');

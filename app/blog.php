@@ -4,10 +4,10 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class author extends Model
+class blog extends Model
 {
     //protected $table = "user_table";
-    protected $table = "authors";
+    protected $table = "blogs";
     protected $primaryKey = "id";
     public $timestamps = false;
 
