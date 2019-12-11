@@ -5,14 +5,14 @@
 </head>
 <body>
 	<h1>Delete Page</h1>
-	<a href="{{route('author.index')}}">Back</a> | 
+	<a href="{{route('admin.index')}}">Back</a> | 
 	<a href="/logout">logout</a>
 	
 	<table border="1">
 	<tr>
 			<td>ID</td>
 			@foreach($users as $s)
-			<td>{{$s->userId}}</td>
+			<td>{{$s->id}}</td>
 		</tr>
 		<tr>
 			<td>USERNAME</td>
@@ -23,8 +23,12 @@
 			<td>{{$s->password}}</td>
 		</tr>
 		<tr>
-			<td>Type</td>
-			<td>{{$s->type}}</td> @endforeach
+			<td>Name</td>
+			<td>{{$s->name}}</td>
+		</tr>
+		<tr>
+			<td>Contact</td>
+			<td>{{$s->contact}}</td> @endforeach
 		</tr>
 	</table>
 

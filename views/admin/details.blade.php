@@ -4,8 +4,8 @@
 	<title>Home page</title>
 </head>
 <body>
-	<h1>User Details</h1>
-	<a href="{{route('author.index')}}">Back</a> | 
+	<h1>Author Details</h1>
+	<a href="{{route('admin.index')}}">Back</a> | 
 	<a href="/logout">logout</a>
 	
 	<table border="1">

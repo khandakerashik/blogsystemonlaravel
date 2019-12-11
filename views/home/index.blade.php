@@ -7,7 +7,7 @@
 	<h1>Welcome Home! {{session('name')}}</h1>
 	<h1>Welcome Home! {{session('user'.'$username')}}</h1>
 	<a href="{{route('author.add')}}">Add Author</a> | 
-	<a href="{{route('author.index')}}">Author List</a> | 
+	<a href="{{route('admin.index')}}">Author List</a> | 
 	<a href="/logout">logout</a>
 	<table>
 	<tr>
